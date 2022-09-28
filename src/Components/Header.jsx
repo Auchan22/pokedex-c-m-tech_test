@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { BiMoon, BiSun } from 'react-icons/bi';
@@ -44,7 +43,7 @@ const Button = styled.button`
   }
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   &:hover {
     text-decoration: none;
     color: ${(props) => (props.isdark ? '#f5f3f4' : '#212529;')};
@@ -55,26 +54,24 @@ const StyledLink = styled(Link)`
 const ThemeButton = ({ handleClick, isdark }) => {
   return (
     <Button onClick={handleClick} isdark={isdark}>
-      {isdark ? <BiMoon /> : <BiSun />}
+      {isdark ? <BiSun /> : <BiMoon />}
     </Button>
   );
 };
 
 const Header = () => {
   const { theme, changeTheme } = useContext(ThemeContext);
-  const [isdark, setisdark] = useState(theme === 'dark');
 
   const handleClick = () => {
     changeTheme();
-    setisdark(() => theme === 'dark');
   };
 
   return (
-    <Container isdark={isdark}>
-      <StyledLink to='/' isdark={isdark}>
+    <Container isdark={theme === 'dark'}>
+      <StyledLink href='/' isdark={theme === 'dark'}>
         <h2 className='nes-text'>Pokedex</h2>
       </StyledLink>
-      <ThemeButton handleClick={handleClick} isdark={isdark} />
+      <ThemeButton handleClick={handleClick} isdark={theme === 'dark'} />
     </Container>
   );
 };
