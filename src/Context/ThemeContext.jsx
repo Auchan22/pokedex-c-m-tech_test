@@ -14,7 +14,7 @@ const ThemeProvider = ({ children }) => {
   const changeTheme = () => {
     let changed = theme === 'light' ? 'dark' : 'light';
     setTheme(changed);
-    console.log(changed);
+    // console.log(changed);
     localStorage.setItem('theme', changed);
   };
 

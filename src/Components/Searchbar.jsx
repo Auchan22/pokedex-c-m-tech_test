@@ -12,27 +12,6 @@ const SearchInput = styled.input`
   font-size: 14px;
 `;
 
-const stylesButton = {
-  position: 'absolute',
-  bottom: 10,
-  left: 0,
-  margin: '10px 10%',
-  minWidth: '80vw',
-};
-
-const NesButton = ({ children, onClick }) => {
-  return (
-    <button
-      onClick={onClick}
-      style={stylesButton}
-      type='submit'
-      className='nes-btn is-error'
-    >
-      {children}
-    </button>
-  );
-};
-
 const StyledSpan = styled.span`
   margin-top: 10px;
   font-size: 10px;
@@ -46,13 +25,7 @@ const EmptyInput = () => {
   );
 };
 
-const Searchbar = ({
-  handleClick,
-  handleSubmit,
-  handleChange,
-  value,
-  isEmpty,
-}) => {
+const Searchbar = ({ handleSubmit, handleChange, value, isEmpty }) => {
   return (
     <Container>
       <form onSubmit={handleSubmit}>
@@ -63,7 +36,6 @@ const Searchbar = ({
           onChange={handleChange}
           value={value}
         />
-        <NesButton onClick={handleClick}>Buscar</NesButton>
       </form>
       {isEmpty && <EmptyInput />}
     </Container>

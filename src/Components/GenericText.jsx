@@ -13,6 +13,10 @@ const Container = styled.div`
   padding: 10px 15px;
   text-align: center;
   box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.19);
+  @media (min-width: 768px) {
+    max-width: 40vw;
+    min-height: 400px;
+  }
 `;
 
 const GenericText = () => {
