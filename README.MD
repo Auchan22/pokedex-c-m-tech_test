@@ -5,6 +5,7 @@
 ## Descripción 📝
 
 El proyecto consiste en crear una página, donde nosotros deberemos buscar un pokemon, ya sea por su nombre o por su id, y deberemos devolverlo, con cierta información.
+- [Desafío](https://github.com/Auchan22/pokedex-c-m-tech_test/blob/main/Desafi%CC%81o%20Te%CC%81cnico_%20Poke-Api.docx)
 
 ## Instalación 🔧
 
