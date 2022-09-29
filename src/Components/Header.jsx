@@ -69,7 +69,7 @@ const Header = () => {
   return (
     <Container isdark={theme === 'dark'}>
       <StyledLink href='/' isdark={theme === 'dark'}>
-        <h2 className='nes-text'>Pokedex</h2>
+        <h2 className='nes-text'>MyPokedex</h2>
       </StyledLink>
       <ThemeButton handleClick={handleClick} isdark={theme === 'dark'} />
     </Container>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const stylesButton = {
-  position: 'fixed',
+  position: 'relative',
   bottom: 10,
   left: 0,
   margin: '10px 10%',
