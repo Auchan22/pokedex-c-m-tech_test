@@ -4,7 +4,7 @@ const stylesButton = {
   position: 'relative',
   bottom: 10,
   left: 0,
-  margin: '10px 10%',
+  margin: '20px 10%',
   minWidth: '80vw',
 };
 

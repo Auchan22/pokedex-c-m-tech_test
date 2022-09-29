@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   max-width: 100vw;
-  margin: 0px auto;
+  margin: 10px auto;
   min-height: 60px;
   padding: 10px;
 `;
@@ -35,7 +35,7 @@ const Searchbar = ({ handleSubmit, handleChange, value, isEmpty }) => {
           className='nes-input is-error'
           onChange={handleChange}
           value={value}
-          autoComplete='false'
+          autoComplete='off'
         />
       </form>
       {isEmpty && <EmptyInput />}

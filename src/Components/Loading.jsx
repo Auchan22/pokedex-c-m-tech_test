@@ -10,7 +10,6 @@ const Loading = () => {
         margin: '10px auto',
         textAlign: 'center',
       }}
-      className='nes-container'
     >
       Cargando... <i class='nes-pokeball'></i>
     </div>
