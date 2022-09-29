@@ -9,6 +9,7 @@ import SearchButton from './SearchButton';
 const Container = styled.div`
   background-color: ${(props) => (props.isdark ? '#190028' : '#f4f1de')};
   min-height: 100vh;
+  padding-bottom: 20px;
 `;
 
 const Layout = ({ children }) => {
@@ -24,9 +25,9 @@ const Layout = ({ children }) => {
         handleChange={handleInputChange}
         value={pokemonSearch}
         isEmpty={empty}
+        onClick={handleClick}
       />
       {children}
-      <SearchButton onClick={handleClick}>Buscar</SearchButton>
     </Container>
   );
 };

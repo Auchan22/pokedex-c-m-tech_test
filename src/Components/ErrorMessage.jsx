@@ -14,7 +14,7 @@ const Container = styled.div`
   text-align: center;
   box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.19);
   @media (min-width: 768px) {
-    max-width: 50vw;
+    max-width: 40vw;
   }
 `;
 

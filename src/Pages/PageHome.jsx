@@ -11,7 +11,7 @@ const PageHome = () => {
 
   return (
     <>
-      {error ? (
+      {/* {error ? (
         <ErrorMessage />
       ) : !dataPokemon ? (
         <GenericText />
@@ -19,7 +19,18 @@ const PageHome = () => {
         <Loading />
       ) : (
         <PokemonCard data={dataPokemon} />
+      )} */}
+
+      {loading && <Loading />}
+      {!dataPokemon && !error ? (
+        <GenericText />
+      ) : !error && !loading ? (
+        <PokemonCard data={dataPokemon} />
+      ) : (
+        !loading && <ErrorMessage />
       )}
+
+      {/* <Loading /> */}
     </>
   );
 };

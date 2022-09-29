@@ -5,9 +5,8 @@ import ThemeContext from '../Context/ThemeContext';
 const Container = styled.div`
   max-width: 90vw;
   min-height: 60%;
-  background-color: ${(props) => (props.isdark ? '#272640' : '#212529')};
-  margin: 15px auto;
-  margin-bottom: 10px;
+  background-color: ${(props) => (props.isdark ? '#6d6875' : '#212529')};
+  margin: 0px auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -15,7 +14,7 @@ const Container = styled.div`
   box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.19);
   color: ${(props) => (props.isdark ? '#ffffff' : '#ffffff')};
   @media (min-width: 768px) {
-    max-width: 50vw;
+    max-width: 40vw;
     display: grid;
     grid-template-columns: repeat(2, minmax(100px, 300px));
     gap: 25px;
@@ -144,7 +143,11 @@ const PokemonCard = ({ data }) => {
     <Container isdark={theme === 'dark'} className='nes-container'>
       <div>
         <h2>{pokemonInfo.nombre}</h2>
-        <img width='150px' src={pokemonInfo.imagen.front_default} />
+        <img
+          width='150px'
+          alt={pokemonInfo.nombre}
+          src={pokemonInfo.imagen.front_default}
+        />
       </div>
 
       <ContainerData>

@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import SearchButton from './SearchButton';
 
 const Container = styled.div`
-  max-width: 100vw;
+  min-width: 100vw;
   margin: 10px auto;
   min-height: 60px;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `;
 
 const SearchInput = styled.input`
-  font-size: 14px;
+  font-size: 12px;
+  min-width: 40vw;
 `;
 
 const StyledSpan = styled.span`
@@ -25,7 +30,7 @@ const EmptyInput = () => {
   );
 };
 
-const Searchbar = ({ handleSubmit, handleChange, value, isEmpty }) => {
+const Searchbar = ({ handleSubmit, handleChange, value, isEmpty, onClick }) => {
   return (
     <Container>
       <form onSubmit={handleSubmit}>
@@ -39,6 +44,7 @@ const Searchbar = ({ handleSubmit, handleChange, value, isEmpty }) => {
         />
       </form>
       {isEmpty && <EmptyInput />}
+      <SearchButton onClick={onClick}>Buscar</SearchButton>
     </Container>
   );
 };

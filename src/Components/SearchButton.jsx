@@ -1,11 +1,8 @@
 import React from 'react';
 
 const stylesButton = {
-  position: 'relative',
-  bottom: 10,
-  left: 0,
-  margin: '20px 10%',
-  minWidth: '80vw',
+  margin: '10px auto',
+  minWidth: '40vw',
 };
 
 const SearchButton = ({ children, onClick }) => {

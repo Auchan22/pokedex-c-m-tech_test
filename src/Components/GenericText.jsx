@@ -6,7 +6,7 @@ const Container = styled.div`
   max-width: 90vw;
   min-height: 60%;
   background-color: ${(props) => (props.isdark ? '#272640' : '#f4f1de')};
-  margin: 15px auto;
+  margin: 0px auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -33,7 +33,9 @@ const GenericText = () => {
         </div>
       </section>
       <i className='nes-ash' style={{ textAlign: 'left' }}></i>
-      <h3 style={{ color: 'black' }}>¿Todavía no buscaste ningún pokemon?</h3>
+      <h3 style={{ color: `${theme === 'dark' ? '#ffffff' : '#000000'}` }}>
+        ¿Todavía no buscaste ningún pokemon?
+      </h3>
     </Container>
   );
 };

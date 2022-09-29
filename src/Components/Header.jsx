@@ -23,7 +23,9 @@ const Button = styled.button`
   color: ${(props) => (props.isdark ? '#0b090a' : '#dee2e6')};
   width: 40px;
   height: 40px;
-  padding: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 20px;
   box-shadow: 0px 4px 20px -3px rgba(0, 0, 0, 0.67);
   border: none;
@@ -53,8 +55,14 @@ const StyledLink = styled.a`
 
 const ThemeButton = ({ handleClick, isdark }) => {
   return (
-    <Button onClick={handleClick} isdark={isdark}>
-      {isdark ? <BiSun /> : <BiMoon />}
+    <Button
+      aria-label='Change Theme Button'
+      title='ThemeButton'
+      role='button'
+      onClick={handleClick}
+      isdark={isdark}
+    >
+      <i>{isdark ? <BiSun /> : <BiMoon />}</i>
     </Button>
   );
 };
@@ -69,7 +77,9 @@ const Header = () => {
   return (
     <Container isdark={theme === 'dark'}>
       <StyledLink href='/' isdark={theme === 'dark'}>
-        <h2 className='nes-text'>MyPokedex</h2>
+        <h2 className='nes-text' style={{ marginBottom: '0px' }}>
+          MyPokedex
+        </h2>
       </StyledLink>
       <ThemeButton handleClick={handleClick} isdark={theme === 'dark'} />
     </Container>
