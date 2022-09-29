@@ -168,14 +168,21 @@ const PokemonCard = ({ data }) => {
       <ContainerData>
         <h3>
           Experiencia Base:{' '}
-          <span style={{ color: '#7a7a7a' }}>{pokemonInfo.expBase}</span>
+          <span style={{ color: `${theme === 'dark' ? 'black' : '#7a7a7a'}` }}>
+            {pokemonInfo.expBase}
+          </span>
         </h3>
         <h3>
           Altura: {''}
-          <span style={{ color: '#7a7a7a' }}>{pokemonInfo.altura}</span>
+          <span style={{ color: `${theme === 'dark' ? 'black' : '#7a7a7a'}` }}>
+            {pokemonInfo.altura}
+          </span>
         </h3>
         <h3>
-          Peso: <span style={{ color: '#7a7a7a' }}>{pokemonInfo.peso}</span>
+          Peso:{' '}
+          <span style={{ color: `${theme === 'dark' ? 'black' : '#7a7a7a'}` }}>
+            {pokemonInfo.peso}
+          </span>
         </h3>
       </ContainerData>
 
@@ -186,7 +193,10 @@ const PokemonCard = ({ data }) => {
             return (
               <p
                 key={el.ability.name}
-                style={{ color: '#7a7a7a', fontWeight: 'bold' }}
+                style={{
+                  color: `${theme === 'dark' ? 'black' : '#7a7a7a'}`,
+                  fontWeight: 'bold',
+                }}
               >
                 {el.ability.name}
               </p>
