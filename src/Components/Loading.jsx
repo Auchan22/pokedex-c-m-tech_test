@@ -8,6 +8,7 @@ const Loading = () => {
         alignItems: 'center',
         width: '80vw',
         margin: '10px auto',
+        textAlign: 'center',
       }}
       className='nes-container'
     >
